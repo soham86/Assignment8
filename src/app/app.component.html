@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+From Child - {{MessageComingFromChild}}<br/><br/><br/>
+<app-child-comp (MyEvent)="MessageComingFromChild= $event"></app-child-comp><br/>
+
+<app-child-comp [parentData]="Message"></app-child-comp><br/>
+
+<router-outlet></router-outlet>
+<app-ng-model-comp></app-ng-model-comp><br><br>
+<app-without-ng-model-comp></app-without-ng-model-comp>
